@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Course Vision</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <!---------NAVIGATION TAB ---------->
+    <nav>
+        <img src="IMAGES/logo.jpeg" alt="">
+        <div class="navigation">
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a class="active" href="about.html">ABOUT</a></li>
+                <li><a href="blog.html">BLOG</a></li>
+                <li><a href="course.html">COURSES</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+            </ul>
+        </div>
+    </nav>
+    <!---------HOME------->
+    <section id="about-home">
+        <h2>About Course Vision </h2>
+        
+    
+    </section >
+    
+    <section id="about-container">
+        <div class="about-img"></div>
+        <img src="IMAGES/bg2.jpeg" alt="">
+
+        <div class="about-text">
+            <h2>Welcome To Course Vision, Enhance Your Skill With Best Online Courses
+            </h2>
+            <p>You can start and finish one of these popular courses in a day- Check out the list below... </p>
+            <div class="about-fe">
+                <img src="IMAGES/fe1.jpeg" alt="">
+                <div class="fe-text">
+                    <h5>400+Courses </h5>
+                    <p>You can start and finish one of these popular courses in our website</p>
+                </div>
+            </div>
+            <div class="about-fe">
+                <img src="IMAGES/fe2.jpeg" alt="">
+                <div class="fe-text">
+                    <h5>Lifetime Access </h5>
+                    <p>Lifetime access to the courses selected </p>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <!---features----->
+    <section id="features">
+        <h1>Awesome Features</h1>
+        <p>Education Is One Thing That No One Can Steal From You!</p>
+        <div class="fea-base">
+            <div class="fea-box">
+                <i class="fa-solid fa-graduation-cap"></i>
+                <h3>Scholarship Facility</h3>
+                <p>Providing cash prize based on their previous performances </p>
+
+            </div>
+            <div class="fea-box">
+                <i class="fa-solid fa-chalkboard"></i>
+                <h3>Online Course</h3>
+                <p>Courses based on users choice </p>
+
+            </div>
+            <div class="fea-box">
+                <i class="fa-solid fa-award"></i>
+                <h3>Global Certification</h3>
+                <p>Certificates issued based on performance </p>
+
+            </div>
+        </div>
+
+    </section>
+    <section id="trust">
+        <h1>Trusted By</h1>
+        <P>In education, trust is the bridge that connects aspirations to achievements. It's the belief that together, we can shape a brighter future through the power of knowledge.</P>
+        <div class="trust-img">
+            <img src="IMAGES/img1.jpeg" alt="">
+            <img src="IMAGES/img2.png" alt="">
+            <img src="IMAGES/img3.png" alt="">
+            <img src="IMAGES/img4.jpeg" alt="">
+            <img src="IMAGES/img5.png" alt="">
+
+        </div>
+
+    </section>
+    <!--footer---->
+    <footer>
+        <div class="footer-col" >
+            <h3>FEATURES</h3>
+            <li>Manage Reputation</li>
+            <li>Power Tools</li>
+            <li>Managed Website</li>
+            <li>Marketing Service</li>
+
+        </div>
+        <div class="footer-col" >
+            <h3>QUICK LINKS</h3>
+            <li>Jobs</li>
+            <li>Brand Assets</li>
+            <li>Investor Relations</li>
+            <li>Terms Of Service</li>
+
+        </div>
+        <div class="footer-col" >
+            <h3>RESOURCES</h3>
+            <li>Guides</li>
+            <li>Research</li>
+            <li>Experts</li>
+            <li>Marketing Service</li>
+
+        </div>
+        <div class="footer-col">
+            <h3>NEWSLETTER </h3>
+            <p>You Can Trust Us! </p>
+            <form name="submit-to-google-sheet">
+                <div class="Subscribe">
+                    <input type="text" name="Email" placeholder="Your E-mail Address">
+                    <button type="submit" class="yello">SUBMIT</button>
+                </div>
+            </form>
+            <span id="msg" style="color: #61b752; margin-top: 20px; display: block;"></span>
+            
+        </div>
+        <div class="copyright">
+            <p>Copyright ©2024 All Rights Reserved | This Template Is Made By Shivani And Madhushree</p>
+            
+                <div class="pro-links">
+                    <i class="fa-brands fa-instagram"></i>
+                    <i class="fa-brands fa-square-facebook"></i>
+                    <i class="fa-brands fa-linkedin"></i>
+                </div>
+            
+
+        </div>
+    </footer>
+
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbx-GjIs52U9Mttrn-0vNdH1Fd4EIQkmqetWpe8QvfDGc3knW50JJLLXanMPNcEJzrAZ/exec'
+        const form = document.forms['submit-to-google-sheet']
+        const msg=document.getElementById("msg")
+      
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => {
+                msg.innerHTML="MESSAGE SENT SUCCESSFULLY! "
+                setTimeout(function(){
+                    msg.innerHTML=""
+                },2000)
+                form.reset()
+            })
+            .catch(error => console.error('Error!', error.message))
+        })
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
